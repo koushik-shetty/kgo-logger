@@ -1,4 +1,4 @@
-package kgo_logger_test
+package kgologger_test
 
 import (
 	"bufio"
@@ -10,7 +10,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	logger "github.com/koushik-shetty/kgo_logger"
+	logger "github.com/koushik-shetty/kgologger"
 )
 
 func readFileContents(file string) (string, error) {

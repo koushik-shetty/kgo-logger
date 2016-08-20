@@ -1,4 +1,4 @@
-package kgo_logger
+package kgologger
 
 import (
 	"io"
