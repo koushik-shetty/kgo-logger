@@ -115,6 +115,7 @@ func defaultfileName(file string) string {
 type BlankLogger struct {
 }
 
+//NewBlankLogger creates a BlankLogger instance
 func NewBlankLogger() *BlankLogger {
 	return &BlankLogger{}
 }
@@ -129,7 +130,7 @@ func (b *BlankLogger) ErrorF(format string, args interface{}) {}
 func (b *BlankLogger) Error(args ...interface{}) {}
 
 //FatalF to implement Loggable
-FatalF(format string, args ...interface{}) {}
+func (b *BlankLogger) FatalF(format string, args ...interface{}) {}
 
 //PrintF to implement Loggable
-PrintF(format string, args ...interface{}) {}
+func (b *BlankLogger) PrintF(format string, args ...interface{}) {}
