@@ -108,3 +108,28 @@ func defaultfileName(file string) string {
 	}
 	return file
 }
+
+//-----------------------Blank Logger--------------------------------
+
+//BlankLogger is used to create a logger that does nothing. this is useful if logging is diabled or for test a client that uses logger
+type BlankLogger struct {
+}
+
+func NewBlankLogger() *BlankLogger {
+	return &BlankLogger{}
+}
+
+//InfoF to implement Loggable
+func (b *BlankLogger) InfoF(format string, args interface{}) {}
+
+//ErrorF to implement Loggable
+func (b *BlankLogger) ErrorF(format string, args interface{}) {}
+
+//Error to implement Loggable
+func (b *BlankLogger) Error(args ...interface{}) {}
+
+//FatalF to implement Loggable
+FatalF(format string, args ...interface{}) {}
+
+//PrintF to implement Loggable
+PrintF(format string, args ...interface{}) {}
