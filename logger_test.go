@@ -83,3 +83,11 @@ func TestLoggerWritesEntriesOfAppropriateLevel(t *testing.T) {
 	assert.Contains(t, fileContents, "TestLog: ErrorLog", "Expected file to contain log entry")
 	removeFile(t, filename)
 }
+
+func TestBlankLoggerImplementsLoggableInterface(t *testing.T) {
+	blankLogger := logger.NewBlankLogger()
+
+	var loggable logger.Loggable = blankLogger
+
+	assert.NotNil(t, loggable, "Expected BlankLogger to implement Loggable interface")
+}

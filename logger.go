@@ -121,10 +121,10 @@ func NewBlankLogger() *BlankLogger {
 }
 
 //InfoF to implement Loggable
-func (b *BlankLogger) InfoF(format string, args interface{}) {}
+func (b *BlankLogger) InfoF(format string, args ...interface{}) {}
 
 //ErrorF to implement Loggable
-func (b *BlankLogger) ErrorF(format string, args interface{}) {}
+func (b *BlankLogger) ErrorF(format string, args ...interface{}) {}
 
 //Error to implement Loggable
 func (b *BlankLogger) Error(args ...interface{}) {}
